@@ -36,6 +36,15 @@ Snail's Todo List
 
 
 
+** 2014/6/22
+*** DONE 完成稀疏矩阵特征值分解
+    CLOSED: [2014-06-22 日 17:44]
+    - State "DONE"       from ""           [2014-06-22 日 17:44]
+
+*** DONE 服务器与git同步
+    CLOSED: [2014-06-22 日 17:46]
+    - State "DONE"       from "TODO"       [2014-06-22 日 17:46]
+
 * 笔记
 ** 如何使用emacs编辑远程文件
 #+BEGIN_SRC cpp
