@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Snail's Todo List</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Snail's Todo List"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2014-06-22T16:43+0800"/>
+<meta name="author" content="黄攀"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Snail's Todo List</h1>
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 个人安排</a>
+<ul>
+<li><a href="#sec-1-1">1.1 学习emacs</a>
+<ul>
+<li><a href="#sec-1-1-1">1.1.1 学习org模式</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-2">1.2 实现TODO同步功能</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 实验室项目</a>
+<ul>
+<li><a href="#sec-2-1">2.1 2014/6/18</a>
+<ul>
+<li><a href="#sec-2-1-1">2.1.1 安装OpenCV SuitSparse</a></li>
+<li><a href="#sec-2-1-2">2.1.2 选择IDE,开始重新编写抠图算法</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-2">2.2 2014/6/19</a>
+<ul>
+<li><a href="#sec-2-2-1">2.2.1 移植CXSparse</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3">2.3 2014/6/21*</a>
+<ul>
+<li><a href="#sec-2-3-1">2.3.1 完成抠图部分算法</a></li>
+<li><a href="#sec-2-3-2">2.3.2 完成前后景分离算法</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 笔记</a>
+<ul>
+<li><a href="#sec-3-1">3.1 如何使用emacs编辑远程文件</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 问题解决</a>
+<ul>
+<li><a href="#sec-4-1">4.1 如何在Mac上安装SuiteSparse</a></li>
+<li><a href="#sec-4-2">4.2 下载并使用purcell的emacs配置文件</a></li>
+<li><a href="#sec-4-3">4.3 *nix下 .bashrc配置</a></li>
+<li><a href="#sec-4-4">4.4 cmake 使用pkg-config添加库</a></li>
+<li><a href="#sec-4-5">4.5 Qt Creator + CMake 不能调试</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 个人安排</h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 学习emacs</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+</div>
+
+<div id="outline-container-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> 学习org模式</h4>
+<div class="outline-text-4" id="text-1-1-1">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 实现TODO同步功能</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 实验室项目</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 2014/6/18</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+</div>
+
+<div id="outline-container-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> <span class="done DONE">DONE</span> 安装OpenCV SuitSparse</h4>
+<div class="outline-text-4" id="text-2-1-1">
+
+<p>     <span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED: </span> <span class="timestamp">2014-06-19 四 11:11</span></span><br/>
+</p><ul>
+<li>State "DONE"       from "TODO" <span class="timestamp-wrapper"> <span class="timestamp">2014-06-19 四 11:11</span></span>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2"><span class="section-number-4">2.1.2</span> <span class="done DONE">DONE</span> 选择IDE,开始重新编写抠图算法</h4>
+<div class="outline-text-4" id="text-2-1-2">
+
+<p>     <span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED: </span> <span class="timestamp">2014-06-19 四 11:11</span></span><br/>
+</p><ul>
+<li>State "DONE"       from "TODO" <span class="timestamp-wrapper"> <span class="timestamp">2014-06-19 四 11:11</span></span>
+</li>
+</ul>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 2014/6/19</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+</div>
+
+<div id="outline-container-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> <span class="done DONE">DONE</span> 移植CXSparse</h4>
+<div class="outline-text-4" id="text-2-2-1">
+
+<p>     <span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED: </span> <span class="timestamp">2014-06-21 六 10:46</span></span><br/>
+</p><ul>
+<li>State "DONE"       from "TODO" <span class="timestamp-wrapper"> <span class="timestamp">2014-06-21 六 10:46</span></span>
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> 2014/6/21*</h3>
+<div class="outline-text-3" id="text-2-3">
+
+
+</div>
+
+<div id="outline-container-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> <span class="done DONE">DONE</span> 完成抠图部分算法</h4>
+<div class="outline-text-4" id="text-2-3-1">
+
+<p>     <span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED: </span> <span class="timestamp">2014-06-21 六 18:50</span></span><br/>
+</p><ul>
+<li>State "DONE"       from "TODO" <span class="timestamp-wrapper"> <span class="timestamp">2014-06-21 六 18:50</span></span>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-3-2" class="outline-4">
+<h4 id="sec-2-3-2"><span class="section-number-4">2.3.2</span> <span class="todo TODO">TODO</span> 完成前后景分离算法</h4>
+<div class="outline-text-4" id="text-2-3-2">
+
+
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 笔记</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> 如何使用emacs编辑远程文件</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+
+
+<pre class="src src-cpp">1. &#21551;&#21160;emacs
+2. &#25353;&#19979;ctrl+c f
+3. &#22312;mini-buffer&#20013;&#36755;&#20837;&#35201;&#32534;&#36753;&#30340;&#25991;&#20214;&#65292;&#26377;&#20197;&#19979;&#20960;&#31181;&#26684;&#24335;
+
+   1./host:filepath
+   2./user@host:filepath
+   3./user@host#port:filepath
+   4./method:user@host:filepath
+   5./method:user@host#port:filepath
+
+   &#25105;&#20351;&#29992;&#20102; /root@lssnail.info:~ &#26469;&#36830;&#25509;&#21040;&#26381;&#21153;&#22120;root&#29992;&#25143;&#30340;home&#30446;&#24405;
+   &#22238;&#36710;&#20043;&#21518;&#65292;&#36755;&#20837;ssh&#23494;&#30721;&#21363;&#21487;
+   &#19981;&#36807;&#22312;org&#27169;&#24335;ctrl+c e h&#23548;&#20986;html&#26102;&#65292;&#25552;&#31034;&#26080;&#27861;&#23548;&#20986;&#65292;&#36824;&#19981;&#30693;&#36947;&#26159;&#20160;&#20040;&#38382;&#39064;&#12290;
+</pre>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> 问题解决</h2>
+<div class="outline-text-2" id="text-4">
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> 如何在Mac上安装SuiteSparse</h3>
+<div class="outline-text-3" id="text-4-1">
+
+
+
+
+<pre class="src src-cpp">brew <span style="color: #268bd2;">install</span> <span style="color: #6c71c4;">suite</span>-parse
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> 下载并使用purcell的emacs配置文件</h3>
+<div class="outline-text-3" id="text-4-2">
+
+
+
+
+<pre class="src src-cpp">git <span style="color: #268bd2;">clone</span> <span style="color: #6c71c4;">https</span>:<span style="color: #93a1a1; font-style: italic;">//</span><span style="color: #93a1a1; font-style: italic;">github.com/purcell/emacs.d.git ~/.emacs.d</span>
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> *nix下 .bashrc配置</h3>
+<div class="outline-text-3" id="text-4-3">
+
+
+
+
+<pre class="src src-bash">alias ll='ls -lG'
+alias la='ls -aG'
+if [ $(pwd) = $HOME ]
+then
+    cd ./Desktop
+fi
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> cmake 使用pkg-config添加库</h3>
+<div class="outline-text-3" id="text-4-4">
+
+
+
+
+<pre class="src src-cpp">find_package(PkgConfig)
+#------------------ modules (pkg-config)------------
+pkg_check_modules(OPENCV <span style="color: #268bd2;">REQUIRED</span> <span style="color: #6c71c4;">opencv</span>)
+
+
+#------------------ include dirs ------------------
+include_directories(
+<span style="color: #2aa198;">"${OPENCV_INCLUDE_DIRS}"</span>
+)
+
+#------------------ library dirs ------------------
+link_directories(
+)
+
+#------------------ libraries --------------------
+target_link_libraries (${PROJECT_NAME}
+${OPENCV_LDFLAGS}
+)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> Qt Creator + CMake 不能调试</h3>
+<div class="outline-text-3" id="text-4-5">
+
+
+
+
+<pre class="src src-cpp"><span style="color: #268bd2;">Qt</span> <span style="color: #6c71c4;">Creator&#21019;&#24314;CMake&#39033;&#30446;&#30340;&#26102;&#20505;</span>&#65292;&#22312;&#21442;&#25968;&#37324;&#36793;&#28155;&#21152;&#19968;&#34892;
+-DCMAKE_BUILD_TYPE=Debug
+</pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2014-06-22T16:43+0800</p>
+<p class="author">Author: 黄攀</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
