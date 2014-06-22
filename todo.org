@@ -1,0 +1,107 @@
+Snail's Todo List
+
+
+* 个人安排
+** 学习emacs
+*** 学习org模式
+
+** 实现TODO同步功能
+
+
+
+
+* 实验室项目
+
+** 2014/6/18
+*** DONE 安装OpenCV SuitSparse
+    CLOSED: [2014-06-19 四 11:11]
+    - State "DONE"       from "TODO"       [2014-06-19 四 11:11]
+*** DONE 选择IDE,开始重新编写抠图算法
+    CLOSED: [2014-06-19 四 11:11]
+    - State "DONE"       from "TODO"       [2014-06-19 四 11:11]
+
+
+** 2014/6/19
+*** DONE 移植CXSparse
+    CLOSED: [2014-06-21 六 10:46]
+    - State "DONE"       from "TODO"       [2014-06-21 六 10:46]
+
+** 2014/6/21*
+*** DONE 完成抠图部分算法
+    CLOSED: [2014-06-21 六 18:50]
+    - State "DONE"       from "TODO"       [2014-06-21 六 18:50]
+
+*** TODO 完成前后景分离算法
+
+
+
+
+* 笔记
+** 如何使用emacs编辑远程文件
+#+BEGIN_SRC cpp
+1. 启动emacs
+2. 按下ctrl+c f
+3. 在mini-buffer中输入要编辑的文件，有以下几种格式
+
+   1./host:filepath
+   2./user@host:filepath
+   3./user@host#port:filepath
+   4./method:user@host:filepath
+   5./method:user@host#port:filepath
+
+   我使用了 /root@lssnail.info:~ 来连接到服务器root用户的home目录
+   回车之后，输入ssh密码即可
+   不过在org模式ctrl+c e h导出html时，提示无法导出，还不知道是什么问题。
+#+END_SRC
+
+
+
+* 问题解决
+** 如何在Mac上安装SuiteSparse
+#+BEGIN_SRC cpp
+   brew install suite-parse
+#+END_SRC
+
+** 下载并使用purcell的emacs配置文件
+#+BEGIN_SRC cpp
+   git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
+#+END_SRC
+
+
+** *nix下 .bashrc配置
+#+BEGIN_SRC bash
+   alias ll='ls -lG'
+   alias la='ls -aG'
+   if [ $(pwd) = $HOME ]
+   then
+       cd ./Desktop
+   fi
+#+END_SRC
+
+** cmake 使用pkg-config添加库
+#+BEGIN_SRC cpp
+   find_package(PkgConfig)
+   #------------------ modules (pkg-config)------------
+   pkg_check_modules(OPENCV REQUIRED opencv)
+
+
+   #------------------ include dirs ------------------
+   include_directories(
+   "${OPENCV_INCLUDE_DIRS}"
+   )
+
+   #------------------ library dirs ------------------
+   link_directories(
+   )
+
+   #------------------ libraries --------------------
+   target_link_libraries (${PROJECT_NAME}
+   ${OPENCV_LDFLAGS}
+   )
+#+END_SRC
+
+** Qt Creator + CMake 不能调试
+#+BEGIN_SRC cpp
+Qt Creator创建CMake项目的时候，在参数里边添加一行
+-DCMAKE_BUILD_TYPE=Debug
+#+END_SRC
