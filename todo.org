@@ -31,9 +31,6 @@ Snail's Todo List
     CLOSED: [2014-06-21 六 18:50]
     - State "DONE"       from "TODO"       [2014-06-21 六 18:50]
 
-** 2014/6/23
-*** TODO 完成前后景分离算法
-*** TODO 完成glviwer类
 
 
 
@@ -46,6 +43,12 @@ Snail's Todo List
 *** DONE 服务器与GIT同步
     CLOSED: [2014-06-22 日 17:46]
     - STATE "DONE"       FROM "TODO"       [2014-06-22 日 17:46]
+
+
+** 2014/6/23
+*** TODO 完成前后景分离算法
+*** TODO 完成glviwer类
+
 
 * 笔记
 ** 如何使用EMACS编辑远程文件
