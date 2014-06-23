@@ -5,10 +5,19 @@ Snail's Todo List
 ** 学习emacs
 *** 学习org模式
 
+** 算法导论
+*** 2014/6/23 复习排序
+**** TODO 快排
+**** TODO 归并
+**** TODO 堆排
+**** TODO 冒泡插入
+
+
 ** 小项目
 *** DONE 实现TODO同步功能
    CLOSED: [2014-06-23 一 13:06]
    - State "DONE"       from "TODO"       [2014-06-23 一 13:06]
+
 
 
 * 实验室项目
@@ -50,17 +59,13 @@ Snail's Todo List
 **** TODO 完成深度图绘制
 **** TODO 完成trackball
 
-*** 算法导论-复习排序
-**** TODO 快排
-**** TODO 归并
-**** TODO 堆排
-**** TODO 冒泡插入
 
 ** 2014/6/24
 *** TODO 前后景分离算法
 
 * 思考
-** TODOLIST 如何使用
+** TOD
+   OLIST 如何使用
 #+BEGIN_SRC cpp
    1.任务完成度
      每天可以写很多任务，尽量保证每分钟都知道在完成哪个任务即可。
@@ -105,6 +110,15 @@ Snail's Todo List
 1. 启动EMACS
 2. 按下CTRL+C F
 3. 在MINI-BUFFER中输入要编辑的文件，有以下几种格式
+
+
+
+
+
+
+
+
+
 
    1./HOST:FILEPATH
    2./USER@HOST:FILEPATH
