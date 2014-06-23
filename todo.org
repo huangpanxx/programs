@@ -55,13 +55,14 @@ Snail's Todo List
 
 
 ** 2014/6/23
-*** 完成glviwer类
-**** TODO 完成深度图绘制
-**** TODO 完成trackball
+*** DONE 完成trackball
+     CLOSED: [2014-06-24 二 00:41]
+     - State "DONE"       from "TODO"       [2014-06-24 二 00:41]
 
 
 ** 2014/6/24
 *** TODO 前后景分离算法
+*** TODO 完成深度图绘制
 
 * 思考
 ** TODOLIST 如何使用
