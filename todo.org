@@ -26,12 +26,14 @@ Snail's Todo List
     CLOSED: [2014-06-21 六 10:46]
     - State "DONE"       from "TODO"       [2014-06-21 六 10:46]
 
-** 2014/6/21*
+** 2014/6/21
 *** DONE 完成抠图部分算法
     CLOSED: [2014-06-21 六 18:50]
     - State "DONE"       from "TODO"       [2014-06-21 六 18:50]
 
+** 2014/6/23
 *** TODO 完成前后景分离算法
+*** TODO 完成glviwer类
 
 
 
@@ -39,45 +41,45 @@ Snail's Todo List
 ** 2014/6/22
 *** DONE 完成稀疏矩阵特征值分解
     CLOSED: [2014-06-22 日 17:44]
-    - State "DONE"       from ""           [2014-06-22 日 17:44]
+    - STATE "DONE"       FROM ""           [2014-06-22 日 17:44]
 
-*** DONE 服务器与git同步
+*** DONE 服务器与GIT同步
     CLOSED: [2014-06-22 日 17:46]
-    - State "DONE"       from "TODO"       [2014-06-22 日 17:46]
+    - STATE "DONE"       FROM "TODO"       [2014-06-22 日 17:46]
 
 * 笔记
-** 如何使用emacs编辑远程文件
-#+BEGIN_SRC cpp
-1. 启动emacs
-2. 按下ctrl+c f
-3. 在mini-buffer中输入要编辑的文件，有以下几种格式
+** 如何使用EMACS编辑远程文件
+#+BEGIN_SRC CPP
+1. 启动EMACS
+2. 按下CTRL+C F
+3. 在MINI-BUFFER中输入要编辑的文件，有以下几种格式
 
-   1./host:filepath
-   2./user@host:filepath
-   3./user@host#port:filepath
-   4./method:user@host:filepath
-   5./method:user@host#port:filepath
+   1./HOST:FILEPATH
+   2./USER@HOST:FILEPATH
+   3./USER@HOST#PORT:FILEPATH
+   4./METHOD:USER@HOST:FILEPATH
+   5./METHOD:USER@HOST#PORT:FILEPATH
 
-   我使用了 /root@lssnail.info:~ 来连接到服务器root用户的home目录
-   回车之后，输入ssh密码即可
-   不过在org模式ctrl+c e h导出html时，提示无法导出，还不知道是什么问题。
+   我使用了 /ROOT@LSSNAIL.INFO:~ 来连接到服务器ROOT用户的HOME目录
+   回车之后，输入SSH密码即可
+   不过在ORG模式CTRL+C E H导出HTML时，提示无法导出，还不知道是什么问题。
 #+END_SRC
 
 
 
 * 问题解决
-** 如何在Mac上安装SuiteSparse
-#+BEGIN_SRC cpp
-   brew install suite-parse
+** 如何在MAC上安装SUITESPARSE
+#+BEGIN_SRC CPP
+   BREW INSTALL SUITE-PARSE
 #+END_SRC
 
-** 下载并使用purcell的emacs配置文件
-#+BEGIN_SRC cpp
-   git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
+** 下载并使用PURCELL的EMACS配置文件
+#+BEGIN_SRC CPP
+   GIT CLONE HTTPS://GITHUB.COM/PURCELL/EMACS.D.GIT ~/.EMACS.D
 #+END_SRC
 
 
-** *nix下 .bashrc配置
+***nix下 .bashrc配置
 #+BEGIN_SRC bash
    alias ll='ls -lG'
    alias la='ls -aG'
