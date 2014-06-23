@@ -5,7 +5,10 @@ Snail's Todo List
 ** 学习emacs
 *** 学习org模式
 
-** 实现TODO同步功能
+** 小项目
+*** DONE 实现TODO同步功能
+   CLOSED: [2014-06-23 一 13:06]
+   - State "DONE"       from "TODO"       [2014-06-23 一 13:06]
 
 
 
