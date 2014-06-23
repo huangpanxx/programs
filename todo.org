@@ -64,8 +64,7 @@ Snail's Todo List
 *** TODO 前后景分离算法
 
 * 思考
-** TOD
-   OLIST 如何使用
+** TODOLIST 如何使用
 #+BEGIN_SRC cpp
    1.任务完成度
      每天可以写很多任务，尽量保证每分钟都知道在完成哪个任务即可。
