@@ -154,6 +154,7 @@ Snail's Todo List
 
 ** cmake 使用pkg-config添加库
 #+BEGIN_SRC cpp
+   ====================== 方法1 ====================
    find_package(PkgConfig)
    #------------------ modules (pkg-config)------------
    pkg_check_modules(OPENCV REQUIRED opencv)
@@ -172,6 +173,14 @@ Snail's Todo List
    target_link_libraries (${PROJECT_NAME}
    ${OPENCV_LDFLAGS}
    )
+   ====================== 方法2 =====================
+
+   cmake_minimum_required(VERSION 2.8)
+   project( DisplayImage )
+   find_package( OpenCV REQUIRED )
+   add_executable( DisplayImage DisplayImage.cpp )
+   target_link_libraries( DisplayImage ${OpenCV_LIBS} )
+
 #+END_SRC
 
 ** Qt Creator + CMake 不能调试
