@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/snail/Downloads/About Downloads.lpdf'
+let g:netrw_dirhist_2='/Users/snail/Downloads/About Downloads.lpdf/Contents'
+let g:netrw_dirhist_3='/Users/snail/Downloads/About Downloads.lpdf'
+let g:netrw_dirhist_4='/Users/snail/Downloads/About Downloads.lpdf/Contents'
+let g:netrw_dirhist_5='/Users/snail/Downloads/About Downloads.lpdf/Contents/_CodeSignature'

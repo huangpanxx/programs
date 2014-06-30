@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="Snail's Todo List"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2014-06-30T12:06+0800"/>
+<meta name="generated" content="2014-06-30T16:17+0800"/>
 <meta name="author" content="黄攀"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -206,6 +206,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-4-3">4.3 cmake 使用pkg-config添加库</a></li>
 <li><a href="#sec-4-4">4.4 Qt Creator + CMake 不能调试</a></li>
 <li><a href="#sec-4-5">4.5 修改ssh默认端口</a></li>
+<li><a href="#sec-4-6">4.6 MAC下ln一个目录，提示"http://stackoverflow.com/questions/9770658/too-many-levels-of-symbolic-links-osx-lion"</a></li>
 </ul>
 </li>
 </ul>
@@ -766,13 +767,33 @@ target_link_libraries( DisplayImage ${OpenCV_LIBS} )
 /etc/init.d/ssh restart &#37325;&#21551;
 </pre>
 
+
+</div>
+
+</div>
+
+<div id="outline-container-4-6" class="outline-3">
+<h3 id="sec-4-6"><span class="section-number-3">4.6</span> MAC下ln一个目录，提示"<a href="http://stackoverflow.com/questions/9770658/too-many-levels-of-symbolic-links-osx-lion">http://stackoverflow.com/questions/9770658/too-many-levels-of-symbolic-links-osx-lion</a>"</h3>
+<div class="outline-text-3" id="text-4-6">
+
+
+
+
+<pre class="src src-cpp"><span style="color: #268bd2;">&#21407;&#22987;&#21629;&#20196;</span>:
+ln -s ./vim ~/.vim
+&#21040;~/&#30446;&#24405;&#19979;&#65292;&#20351;&#29992;ll -a &#65292;&#26174;&#31034; ~/.vim -&gt; ./.vim
+&#22240;&#27492;&#21629;&#20196;&#26367;&#25442;&#20026;
+ln -s ~/Desktop/programs/cfg/vim/vim ~/.vim
+&#19981;&#30693;&#36947;&#36825;&#26159;&#19981;&#26159;osx&#31995;&#32479;&#30340;&#19968;&#20010;&#22353;&#12290;
+</pre>
+
 </div>
 </div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2014-06-30T12:06+0800</p>
+<p class="date">Date: 2014-06-30T16:17+0800</p>
 <p class="author">Author: 黄攀</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

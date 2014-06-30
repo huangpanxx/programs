@@ -205,3 +205,13 @@ Qt Creator创建CMake项目的时候，在参数里边添加一行
 vi /etc/ssh/sshd_config 修改Port 22到想要的端口
 /etc/init.d/ssh restart 重启
 #+END_SRC
+
+** MAC下ln一个目录，提示"http://stackoverflow.com/questions/9770658/too-many-levels-of-symbolic-links-osx-lion"
+#+BEGIN_SRC cpp
+原始命令:
+ln -s ./vim ~/.vim
+到~/目录下，使用ll -a ，显示 ~/.vim -> ./.vim
+因此命令替换为
+ln -s ~/Desktop/programs/cfg/vim/vim ~/.vim
+不知道这是不是osx系统的一个坑。
+#+END_SRC
