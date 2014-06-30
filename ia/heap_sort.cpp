@@ -6,20 +6,14 @@ int arr[] = {1, 4, 2, 1};
 
 
 void make_heap(int *p, int k, int n) {
-	while(true) {
-		if(2*k+1 < n && p[k] > p[2*k+1]
-		 && (2*k+2>=n || p[2*k+1] <= p[2*k+2])) {
-			swap(p[k],p[2*k+1]);
-			k = 2*k+1;
-			continue;
-		}
-		if(2*k+2 < n && p[k] > p[2*k+2]
-			&& p[2*k+2] <= p[2*k+1]){
-			swap(p[k],p[2*k+2]);
-			k = 2*k+2;
-			continue;
-		}
-		break;
+	if(2*k+1 < n && p[k] > p[2*k+1]
+	 && (2*k+2>=n || p[2*k+1] <= p[2*k+2])) {
+		swap(p[k],p[2*k+1]);
+		make_heap(p,2*k+1,n);
+	} else if(2*k+2 < n && p[k] > p[2*k+2]
+		&& p[2*k+2] <= p[2*k+1]){
+		swap(p[k],p[2*k+2]);
+		make_heap(p,2*k+2,n);
 	}
 }
 
