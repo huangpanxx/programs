@@ -6,7 +6,7 @@ Snail's Todo List
 *** 学习org模式
 
 ** 算法导论
-*** 2014/6/23 复习排序
+*** 2014/6/29 复习排序
 **** TODO 快排
 **** TODO 归并
 **** TODO 堆排
@@ -17,6 +17,16 @@ Snail's Todo List
 *** DONE 实现TODO同步功能
    CLOSED: [2014-06-23 一 13:06]
    - State "DONE"       from "TODO"       [2014-06-23 一 13:06]
+
+** 黑米
+*** DONE 添加全局自动更新功能
+    CLOSED: [2014-06-29 日 21:23]
+    - State "DONE"       from ""           [2014-06-29 日 21:23]
+
+*** TODO 中文表达式解析功能
+*** TODO 软件加密
+
+
 
 
 
@@ -61,8 +71,21 @@ Snail's Todo List
 
 
 ** 2014/6/24
+*** DONE 完成深度图绘制
+    CLOSED: [2014-06-29 日 09:24]
+    - State "DONE"       from "TODO"       [2014-06-29 日 09:24]
+
+
+** 2014/6/29
+*** DONE 修复显示y轴显示问题
+    CLOSED: [2014-06-29 日 21:22]
+    - State "DONE"       from "TODO"       [2014-06-29 日 21:22]
+*** DONE 添加dismap生成算法
+    CLOSED: [2014-06-29 日 21:22]
+    - State "DONE"       from "TODO"       [2014-06-29 日 21:22]
+
+** 2014/6/30
 *** TODO 前后景分离算法
-*** TODO 完成深度图绘制
 
 * 思考
 ** TODOLIST 如何使用
