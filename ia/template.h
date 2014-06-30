@@ -19,6 +19,6 @@ using namespace std;
 #define FO(I,N) for (int I=0;I<(int)(N);++I)
 #define FO_(I,A,B) for (int I=(A);I<(int)(B);++I)
 #define LOOP(n) for (int _llllllll=0;_llllllll<(n);++_llllllll)
-#define SIZE(n) (sizeof(n)/sizeof((n)[0])
+#define SIZE(n) (sizeof(n)/sizeof((n)[0]))
 
 
