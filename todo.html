@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="Snail's Todo List"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2014-06-29T21:24+0800"/>
+<meta name="generated" content="2014-06-30T12:05+0800"/>
 <meta name="author" content="黄攀"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -205,6 +205,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-4-2">4.2 下载并使用PURCELL的EMACS配置文件</a></li>
 <li><a href="#sec-4-3">4.3 cmake 使用pkg-config添加库</a></li>
 <li><a href="#sec-4-4">4.4 Qt Creator + CMake 不能调试</a></li>
+<li><a href="#sec-4-5">4.5 修改ssh默认端口</a></li>
 </ul>
 </li>
 </ul>
@@ -691,6 +692,7 @@ fi
 </pre>
 
 
+
 </div>
 
 </div>
@@ -732,6 +734,7 @@ target_link_libraries( DisplayImage ${OpenCV_LIBS} )
 </pre>
 
 
+
 </div>
 
 </div>
@@ -747,13 +750,29 @@ target_link_libraries( DisplayImage ${OpenCV_LIBS} )
 -DCMAKE_BUILD_TYPE=Debug
 </pre>
 
+
+</div>
+
+</div>
+
+<div id="outline-container-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> 修改ssh默认端口</h3>
+<div class="outline-text-3" id="text-4-5">
+
+
+
+
+<pre class="src src-cpp">vi /etc/ssh/sshd_config &#20462;&#25913;Port 22&#21040;&#24819;&#35201;&#30340;&#31471;&#21475;
+/etc/init.d/sshd restart &#37325;&#21551;
+</pre>
+
 </div>
 </div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2014-06-29T21:24+0800</p>
+<p class="date">Date: 2014-06-30T12:05+0800</p>
 <p class="author">Author: 黄攀</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

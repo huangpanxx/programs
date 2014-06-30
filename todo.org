@@ -161,6 +161,7 @@ Snail's Todo List
    fi
 #+END_SRC
 
+
 ** cmake 使用pkg-config添加库
 #+BEGIN_SRC cpp
    ====================== 方法1 ====================
@@ -192,8 +193,15 @@ Snail's Todo List
 
 #+END_SRC
 
+
 ** Qt Creator + CMake 不能调试
 #+BEGIN_SRC cpp
 Qt Creator创建CMake项目的时候，在参数里边添加一行
 -DCMAKE_BUILD_TYPE=Debug
+#+END_SRC
+
+** 修改ssh默认端口
+#+BEGIN_SRC cpp
+vi /etc/ssh/sshd_config 修改Port 22到想要的端口
+/etc/init.d/sshd restart 重启
 #+END_SRC
