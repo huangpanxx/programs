@@ -2,12 +2,14 @@ filetype plugin indent on
 syntax on 
 set nu
 set sw=4
+set tw=4
 set nocp
+
 
 "括号补全
 :inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
-:inoremap { {<CR>}<ESC>O
+:inoremap { {}<ESC>i
 :inoremap } <c-r>=ClosePair('}')<CR>
 :inoremap [ []<ESC>i
 :inoremap ] <c-r>=ClosePair(']')<CR>
@@ -29,9 +31,8 @@ map <C-A> ^
 map <C-E> $
 
 
-"按Ctrl-B [保存],[编译],[运行] 当前文件
+"按Ctrl-R [保存],[编译],[运行] 当前文件
 map <C-R> :call Compile()<CR>
-
 func! Compile()
 	if &filetype == 'c'
 		exec "w"
@@ -41,11 +42,14 @@ func! Compile()
 		exec "w"
 		exec "! g++ % -o %< ; \ .\/%< ; rm -rf .\/%< && echo 运行完毕..."
 	endif
+	if &filetype == 'python'
+		exec "w"
+		exec "! python %"
+	endif
 endfun
 
 "按Ctrl-B [保存],[编译] 当前文件
 map <C-B> :call Run()<CR>
-
 func! Run()
 	if &filetype == 'c'
 		exec "w"
