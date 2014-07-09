@@ -11,24 +11,16 @@ void merge_sort(int *p,int n){
     merge_sort(p2, np2);
     FO(i,n) {
 	if(np1 == 0) {
-	    tmp[i] = *p2;
-	    p2++;
-	    np2--;
+	    tmp[i] = *p2; p2++; np2--;
 	} else if(np2 == 0){
-	    tmp[i] = *p1;
-	    p1++;
-	    np1--;
-	}else if(*p1 > *p2) {
-	    tmp[i] = *p2;
-	    p2++;
-	    np2--;
-	}else {
-	    tmp[i] = *p1;
-	    p1++;
-	    np1--;
+	    tmp[i] = *p1; p1++; np1--;
+	} else if(*p1 > *p2) {
+	    tmp[i] = *p2; p2++; np2--;
+	} else {
+	    tmp[i] = *p1; p1++; np1--;
 	}
     }
-    FO(i,n){
+    FO(i,n) {
 	p[i] = tmp[i];
     }
 }
@@ -40,3 +32,4 @@ int main() {
 	printf("%d\n",arr[i]);
     }
 }
+
