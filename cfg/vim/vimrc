@@ -28,7 +28,7 @@ endfunction
 
 
 
-"移动到行首,
+"移动到行首
 map <C-A> ^
 "移动到行尾
 map <C-E> $
